@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Telemedicine Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#" id="logout-link" style="display:none;">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="dashboard">
+            <h2>Welcome, <span id="user-name"></span>!</h2>
+            <div>
+                <h3>Manage Consultations</h3>
+                <button onclick="showForm('add-consultation-form')">Add Consultation</button>
+                <div id="consultation-list"></div>
+            </div>
+            <div>
+                <h3>Manage Doctors</h3>
+                <button onclick="showForm('add-doctor-form')">Add Doctor</button>
+                <div id="doctor-list"></div>
+            </div>
+        </section>
+
+        <section id="add-consultation-form" class="form-section" style="display: none;">
+            <h3>Add Consultation</h3>
+            <form onsubmit="addConsultation(event)">
+                <input type="text" id="consultation-doctor" placeholder="Doctor Name" required>
+                <input type="date" id="consultation-date" required>
+                <input type="time" id="consultation-time" required>
+                <button type="submit">Add</button>
+                <button type="button" onclick="hideForm('add-consultation-form')">Cancel</button>
+            </form>
+        </section>
+
+        <section id="add-doctor-form" class="form-section" style="display: none;">
+            <h3>Add Doctor</h3>
+            <form onsubmit="addDoctor(event)">
+                <input type="text" id="doctor-name" placeholder="Doctor Name" required>
+                <input type="text" id="doctor-specialty" placeholder="Specialty" required>
+                <button type="submit">Add</button>
+                <button type="button" onclick="hideForm('add-doctor-form')">Cancel</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Telemedicine App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

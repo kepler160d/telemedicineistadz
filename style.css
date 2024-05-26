@@ -1,0 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    width: 25px;
+    height: 25px;
+}
+
+#hero {
+    background-color: #fff;
+    padding: 2em;
+    text-align: center;
+}
+
+#hero button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 1em 2em;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+main {
+    flex: 1;
+}
+
+#dashboard, #login {
+    padding: 2em;
+    background-color: #e9e9e9;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form input, form button {
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.form-section {
+    margin-top: 2em;
+}
+
+#consultation-list, #doctor-list {
+    margin-top: 1em;
+}
+
+.consultation, .doctor {
+    background-color: #fff;
+    padding: 1em;
+    margin: 0.5em 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
